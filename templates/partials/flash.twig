@@ -1,0 +1,14 @@
+      <div id="flash">
+{% if flash.getMessage('info') %}
+        <div id="service-alert" class="alert alert-info alert-dismissable fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Info!</strong> {{ flash.getMessage('info') | first }}</div>
+{% endif %}
+{% if flash.getMessage('success') %}
+        <div id="service-alert" class="alert alert-success alert-dismissable fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Success!</strong> {{ flash.getMessage('success') | first }}</div>
+{% endif %}
+{% if flash.getMessage('warning') %}
+        <div id="service-alert" class="alert alert-warning alert-dismissable fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Warning!</strong> {{ flash.getMessage('warning') | first }}</div>
+{% endif %}
+{% if flash.getMessage('danger') %}
+        <div id="service-alert" class="alert alert-danger alert-dismissable fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Error!</strong> {{ flash.getMessage('danger') | first }}</div>
+{% endif %}
+      </div>

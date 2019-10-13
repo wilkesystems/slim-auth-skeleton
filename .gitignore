@@ -1,0 +1,17 @@
+.DS_Store
+.buildpath
+.classpath
+.phpunit.result.cache
+.project
+.settings
+/logs/*
+!/logs/.htaccess
+/var/cache/*
+!/var/cache/.htaccess
+/var/databases/*
+!/var/databases/.htaccess
+/var/sessions/*
+!/var/sessions/.htaccess
+/vendor/*
+!/vendor/.htaccess
+composer.lock

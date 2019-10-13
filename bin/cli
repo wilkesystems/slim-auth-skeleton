@@ -1,0 +1,22 @@
+#!/usr/bin/env php
+<?php
+use App\Bootstrap;
+
+if (PHP_SAPI != 'cli') {
+    echo 'bin/cli must be run as a CLI application';
+    exit(1);
+}
+
+if (! file_exists(__DIR__ . '/../vendor/autoload.php')) {
+    die('please run "composer install"');
+}
+
+require __DIR__ . '/../vendor/autoload.php';
+
+if (! class_exists('App\Bootstrap')) {
+    die('Bootstrap class not found');
+}
+
+$app = new Bootstrap();
+
+$app->cli();
